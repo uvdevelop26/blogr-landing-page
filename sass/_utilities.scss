@@ -1,0 +1,87 @@
+@use "sass:math";
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.48rem;
+}
+
+.button-reset {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin button-design($background: white, $color: $lightRed) {
+  width: 137px;
+  height: 49px;
+  background: $background;
+  border-radius: 25px;
+  font-weight: map-get($Weights, "w-xlg");
+  color: $color;
+  cursor: pointer;
+}
+
+.title-three {
+  text-align: center;
+  font-size: 1.79rem;
+  line-height: 34px;
+  letter-spacing: 0.4px;
+}
+
+.paragraph {
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.max-h-0 {
+  max-height: 0;
+  padding: 0;
+  margin-top: 0; 
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
+}
+
+.max-h-full {
+  max-height: 500px;
+  padding: 1.4rem 0; 
+  margin-top: 1.5rem; 
+  transition: max-height 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
+}
+
+/* flex box */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row($justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-column($justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}

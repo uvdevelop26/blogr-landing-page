@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/* colors */
+/* primary */
+/* neutral */
+/* GRADIENT -background gradient - Intro CTA/Mobile nav */
+/* background gradient -body */
+/* fuentes y más */
+/* Base Padding */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  font-family: "Overpass", sans-serif;
+  /*   font-family: 'Ubuntu', sans-serif; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.48rem;
+}
+
+.button-reset {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.title-three {
+  text-align: center;
+  font-size: 1.79rem;
+  line-height: 34px;
+  letter-spacing: 0.4px;
+}
+
+.paragraph {
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.max-h-0 {
+  max-height: 0;
+  padding: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
+}
+
+.max-h-full {
+  max-height: 500px;
+  padding: 1.4rem 0;
+  margin-top: 1.5rem;
+  transition: max-height 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
+}
+
+/* flex box */
+.hero {
+  height: 37.4rem;
+  background: url("../images/bg-pattern-intro-mobile.svg") no-repeat right -450px center/1150px 1150px, hsl(356, 100%, 66%);
+  border-bottom-left-radius: 5.79rem;
+}
+
+/* navbar */
+.navbar {
+  padding-top: 3.6rem;
+  position: relative;
+}
+
+.navbar--head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar--head .navbar__logo {
+  width: 83px;
+  height: 32px;
+}
+
+.navbar--content {
+  position: absolute;
+  width: 98.6%;
+  left: 50%;
+  top: 138%;
+  transform: translateX(-50%);
+  background: hsl(0, 0%, 100%);
+  padding: 2.1rem 1.2rem 2.1rem 1.2rem;
+  z-index: 50;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: -3px 10px 14px -7px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: -3px 10px 14px -7px rgba(0, 0, 0, 0.57);
+  box-shadow: -3px 10px 14px -7px rgba(0, 0, 0, 0.57);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.navbar--content .navbar__content__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #efeff1;
+}
+.navbar--content .navbar__content__list .navbar__list {
+  text-align: center;
+  color: hsl(237, 17%, 21%);
+  width: 100%;
+}
+.navbar--content .navbar__content__list .navbar__toggle__button {
+  font-weight: 700;
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar--content .navbar__content__list .navbar__content__list__inner {
+  background: #efeff1;
+  width: 100%;
+  /* margin-top: 1.5rem; */
+  letter-spacing: 0.9px;
+  /*  padding: 1.4rem 0 1.4rem 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.navbar--content .navbar__footer {
+  padding: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+.navbar--content .navbar__footer .navbar__login__button {
+  width: 137px;
+  height: 49px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  font-weight: 700;
+  color: hsl(208, 49%, 24%);
+  cursor: pointer;
+  letter-spacing: 1.1px;
+  padding-top: 8px;
+}
+.navbar--content .navbar__footer .navbar__sign__button {
+  width: 137px;
+  height: 49px;
+  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(356, 100%, 66%));
+  border-radius: 25px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+/* header */
+.header {
+  margin-top: 3.5rem;
+  padding: 3.28rem 1.1rem 0 1.1rem;
+  width: 100%;
+}
+.header .header__title {
+  font-size: 30.1px;
+  text-align: center;
+  line-height: 2.9rem;
+  letter-spacing: 1.2px;
+  color: hsl(0, 0%, 100%);
+}
+.header .header__slogan {
+  padding-top: 13px;
+  font-size: 18px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.header .header__button__container {
+  padding-top: 46px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__button__start {
+  width: 137px;
+  height: 49px;
+  background: white;
+  border-radius: 25px;
+  font-weight: 700;
+  color: hsl(356, 100%, 66%);
+  cursor: pointer;
+}
+.header .header__button__learn {
+  width: 137px;
+  height: 49px;
+  background: none;
+  border-radius: 25px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+/* section designed */
+.designed {
+  padding-top: 3.49rem;
+}
+.designed .designed__title {
+  text-align: center;
+  padding-top: 3.1rem;
+  font-size: 1.6rem;
+}
+.designed .designed__inner__container {
+  padding-top: 1.8rem;
+}
+.designed .designed__figure {
+  height: 23rem;
+  background: url("../images/illustration-editor-mobile.svg");
+  background-size: cover cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.designed .designed__info {
+  padding-top: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+.designed .designed__paragraph__one {
+  padding: 0.8rem 0.4rem 0 0.4rem;
+}
+.designed .designed__paragraph__two {
+  padding: 1.3rem 0.4rem 0 0.4rem;
+}
+
+/* section state */
+.state {
+  background: url("../images/bg-pattern-circles.svg") no-repeat center top -240px/600px 600px, hsl(208, 49%, 24%);
+  position: relative;
+  margin-top: 16.7rem;
+  height: 39.2rem;
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.state .state--figure {
+  position: absolute;
+  width: 100%;
+  top: -11.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.state .state__figure__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.state .state--text--container {
+  margin-top: 6.9rem;
+}
+.state .state__title {
+  font-size: 2.3rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  line-height: 3.2rem;
+}
+.state .state__paragraph {
+  padding: 1.1rem 0.5rem 0 0.5rem;
+  letter-spacing: 0.4px;
+  color: hsl(0, 0%, 100%);
+}
+
+/* section free */
+.free {
+  padding-top: 1rem;
+}
+.free .free__inner__container {
+  padding-top: 2rem;
+}
+.free .free__figure {
+  background: url("../images/illustration-laptop-mobile.svg");
+  background-size: cover cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 24rem;
+}
+.free .free__text__container {
+  padding-top: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center center;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+.free .free__paragraph__one {
+  padding: 1.5rem 0.5rem 0 0.5rem;
+}
+.free .free__paragraph__two {
+  padding: 1.7rem 0.5rem 0 0.5rem;
+}
+
+/* footer */
+.footer {
+  margin-top: 6rem;
+  height: 56.5rem;
+  padding-top: 3rem;
+  background: hsl(240, 10%, 16%);
+  border-top-right-radius: 6rem;
+}
+.footer .footer__inner__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center center;
+  align-items: stretch;
+  gap: 4rem;
+}
+.footer .footer__logo__container {
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+.footer .footer__list__container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center center;
+  align-items: stretch;
+  gap: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.footer .footer__list__main {
+  padding: 0.1rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.footer .footer__list__main .footer__list__inner {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center center;
+  align-items: stretch;
+  gap: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 18px;
+}

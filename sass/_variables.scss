@@ -1,0 +1,38 @@
+/* colors */
+
+/* primary */
+$lightRed: hsl(356, 100%, 66%);
+$veryLightRed: hsl(355, 100%, 74%);
+$veryDarkBlue: hsl(208, 49%, 24%);
+
+/* neutral */
+$white: hsl(0, 0%, 100%);
+$graylishBlue: hsl(240, 2%, 79%);
+$veryDarkGraylishBlue: hsl(207, 13%, 34%);
+$veryDarkBlackBlue: hsl(240, 10%, 16%);
+$submenuFond: hsl(240, 7%, 94%);
+
+/* GRADIENT -background gradient - Intro CTA/Mobile nav */
+$veryLightRedGradient: hsl(13, 100%, 72%);
+$lightRedGradient: hsl(353, 100%, 62%);
+
+/* background gradient -body */
+$veryDarkGrayBlue: hsl(237, 17%, 21%);
+$veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+/* fuentes y más */
+$bodyFont: 16px;
+
+$Weights: (
+  "w-xsm": 300,
+  "w-sm": 400,
+  "w-md": 500,
+  "w-lg": 600,
+  "w-xlg": 700,
+);
+
+/* Base Padding */
+
+$basePadding: 1rem;
+$baseMargin: 1.5rem;
+

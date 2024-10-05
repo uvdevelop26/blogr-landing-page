@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!--  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="hero">
+    <div class="container">
+      <!-- navbar -->
+      <nav class="navbar" id="navbar">
+        <!-- navbar head -->
+        <div class="navbar--head">
+          <img src="./images/logo.svg" alt="logo" class="navbar__logo" />
+          <button type="button" aria-label="open menu" class="navbar__button button-reset" id="openMenu">
+            <img src="./images/icon-hamburger.svg" alt="open-menu" />
+          </button>
+        </div>
+        <!-- navbar content -->
+        <div class="navbar--content hidden" id="navbarContent">
+          <ul class="navbar__content__list">
+            <li class="navbar__list">
+              <button type="button" class="button-reset navbar__toggle__button" aria-label="product submenu">
+                Product
+                <img src="./images/icon-arrow-dark.svg" alt="product" />
+              </button>
+              <ul class="navbar__content__list__inner max-h-0">
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+              </ul>
+            </li>
+            <li class="navbar__list">
+              <button type="button" class="button-reset navbar__toggle__button" aria-label="company submenu">
+                Company
+                <img src="./images/icon-arrow-dark.svg" alt="company" />
+              </button>
+              <ul class="navbar__content__list__inner max-h-0">
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </li>
+            <li class="navbar__list">
+              <button type="button" class="button-reset navbar__toggle__button" aria-label="connect submenu">
+                Connet
+                <img src="./images/icon-arrow-dark.svg" alt="connect" />
+              </button>
+              <ul class="navbar__content__list__inner max-h-0">
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="navbar__footer">
+            <button type="button" aria-label="login" class="button-reset navbar__login__button">
+              Login
+            </button>
+            <button type="button" aria-label="sign up" class="button-reset navbar__sign__button">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- header -->
+      <header class="header">
+        <h1 class="header__title">A modern publishing platform</h1>
+        <p class="header__slogan">Grow your audience and build your online brand</p>
+        <div class="header__button__container">
+          <button type="button" aria-label="start for free" class="button-reset header__button__start">Start for
+            Free</button>
+          <button type="button" aria-label="learn more" class="button-reset header__button__learn">Learn More</button>
+        </div>
+      </header>
+    </div>
+  </div>
+  <!-- designed section -->
+  <section class="designed">
+    <div class="container">
+      <h2 class="designed__title">Designed for the future</h2>
+      <div class="designed__inner__container">
+        <figure class="designed__figure"></figure>
+        <div class="designed__info">
+          <div class="designed__info__container">
+            <h3 class="title-three">Introducing an extensible editor</h3>
+            <p class="paragraph designed__paragraph__one">
+              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+          </div>
+          <div class="designed__info__container">
+            <h3 class="title-three">Robust content management</h3>
+            <p class="paragraph designed__paragraph__two">
+              Flexible content management enables users to easily move through posts. Increase the usability of your
+              blog
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full
+              control.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section state -->
+  <section class="state">
+    <div class="container">
+      <div class="state--figure">
+        <img src="/images/illustration-phones.svg" alt="cell phone" class="state__figure__img" />
+      </div>
+      <div class="state--text--container">
+        <h2 class="state__title">State of the Art Infrastructure</h2>
+        <p class="paragraph state__paragraph"> With reliability and speed in mind, worldwide data centers provide the
+          backbone for
+          ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- free -->
+  <section class="free">
+    <div class="container">
+      <div class="free__inner__container">
+        <figure class="free__figure"></figure>
+        <div class="free__text__container">
+          <div>
+            <h2 class="title-three">Free, open, simple</h2>
+            <p class="paragraph free__paragraph__one">
+              Blogr is a free and open source application backed by a large community of helpful developers. It supports
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+              tools,
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+          </div>
+          <div>
+            <h2 class="title-three">Powerful tooling</h2>
+            <p class="paragraph free__paragraph__two">
+              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
+              a
+              breeze,
+              but
+              capable of producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ********** -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner__container">
+        <div class="footer__logo__container">
+          <img src="/images/logo.svg" alt="logo" />
+        </div>
+        <ul class="footer__list__container">
+          <li class="footer__list__main">
+            Product
+            <ul class="footer__list__inner">
+              <li class="footer_list">Overview</li>
+              <li class="footer_list">Pricing</li>
+              <li class="footer_list">Marketplace</li>
+              <li class="footer_list">Features</li>
+              <li class="footer_list">Integrations</li>
+            </ul>
+          </li>
+          <li class="footer__list__main">
+            Company
+            <ul class="footer__list__inner">
+              <li class="footer_list">About</li>
+              <li class="footer_list">Team</li>
+              <li class="footer_list">Blog</li>
+              <li class="footer_list">Careers</li>
+            </ul>
+          </li>
+          <li class="footer__list__main">
+            Connect
+            <ul class="footer__list__inner">
+              <li class="footer_list">Contact</li>
+              <li class="footer_list">Newsletter</li>
+              <li class="footer_list">LinkedIn</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
