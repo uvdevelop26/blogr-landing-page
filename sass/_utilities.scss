@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1157px;
   margin: 0 auto;
   padding: 0 1.48rem;
 }
@@ -19,7 +19,7 @@
   height: 49px;
   background: $background;
   border-radius: 25px;
-  font-weight: map-get($Weights, "w-xlg");
+  font-weight: map-get($weights, "w-xlg");
   color: $color;
   cursor: pointer;
 }
@@ -29,12 +29,23 @@
   font-size: 1.79rem;
   line-height: 34px;
   letter-spacing: 0.4px;
+
+  @include lg {
+    text-align: left;
+    font-size: 1.74rem;
+    letter-spacing: 0.1px;
+  }
 }
 
 .paragraph {
   text-align: center;
   line-height: 28px;
   letter-spacing: 0.3px;
+  color: $veryDarkGraylishBlue;
+
+  @include lg {
+    text-align: left;
+  }
 }
 
 .hidden {
@@ -52,15 +63,15 @@
 .max-h-0 {
   max-height: 0;
   padding: 0;
-  margin-top: 0; 
+  margin-top: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
 }
 
 .max-h-full {
   max-height: 500px;
-  padding: 1.4rem 0; 
-  margin-top: 1.5rem; 
+  padding: 1.4rem 0;
+  margin-top: 1.5rem;
   transition: max-height 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
 }
 

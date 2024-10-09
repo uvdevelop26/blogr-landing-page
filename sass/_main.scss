@@ -1,9 +1,15 @@
 .hero {
   height: 37.4rem;
-  background: url("../images/bg-pattern-intro-mobile.svg") no-repeat right -450px
-      center / 1150px 1150px,
+  background: url("../images/bg-pattern-intro-mobile.svg") no-repeat right -700px
+      top -370px / 1600px 1500px,
     $lightRed;
   border-bottom-left-radius: 5.79rem;
+
+  @include lg {
+    background: url("../images/bg-pattern-intro-desktop.svg") no-repeat top -1250px
+        right -1200px,
+      $lightRed;
+  }
 }
 
 /* navbar */
@@ -11,6 +17,12 @@
 .navbar {
   padding-top: 3.6rem;
   position: relative;
+
+  @include lg {
+    padding-top: 3.9rem;
+    @include flex-row(start, start);
+    gap: 4.1rem;
+  }
 }
 
 .navbar--head {
@@ -19,6 +31,17 @@
   .navbar__logo {
     width: 83px;
     height: 32px;
+
+    @include lg {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .navbar__button {
+    @include lg {
+      display: none;
+    }
   }
 }
 
@@ -37,6 +60,20 @@
   box-shadow: -3px 10px 14px -7px rgba(0, 0, 0, 0.57);
   @include flex-column(start, center);
 
+  @include lg {
+    @include flex-row(flex-start, stretch);
+    position: static;
+    left: auto;
+    top: auto;
+    background: transparent;
+    transform: none;
+    width: 100%;
+    padding: 0rem 0 0 0rem;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
   .navbar__content__list {
     width: 100%;
     @include flex-column(center, center);
@@ -44,31 +81,79 @@
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #efeff1;
 
+    @include lg {
+      @include flex-row(flex-start, stretch);
+      gap: 1.3rem;
+      border-bottom: none;
+      padding-bottom: 0rem;
+      padding: 0.8rem 0 0 0.5rem;
+    }
+
     .navbar__list {
       text-align: center;
       color: $veryDarkGrayBlue;
       width: 100%;
+      position: relative;
+
+      @include lg {
+        width: auto;
+      }
     }
 
     .navbar__toggle__button {
-      font-weight: 700;
+      font-weight: map-get($weights, "w-xlg");
       width: 100%;
       font-size: 18px;
       letter-spacing: 0.3px;
       @include flex-row(center, center);
       gap: 0.5rem;
+
+      @include lg {
+        color: $white;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     .navbar__content__list__inner {
       background: #efeff1;
       width: 100%;
-      /* margin-top: 1.5rem; */
-      letter-spacing: 0.9px;
-      /*  padding: 1.4rem 0 1.4rem 0; */
       @include flex-column(center, center);
       gap: 1.2rem;
       border-radius: 0.5rem;
       overflow: hidden;
+
+      @include lg {
+        position: absolute;
+        margin-top: 1.5rem;
+        left: -14px;
+        width: 10.6rem;
+        padding: 2rem 1rem 1rem 1.4rem;
+        @include flex-column(center, start);
+        gap: 0.8rem;
+        -webkit-box-shadow: -3px 10px 14px -7px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: -3px 10px 14px -7px rgba(0, 0, 0, 0.57);
+        box-shadow: -3px 10px 14px -7px rgba(0, 0, 0, 0.57);
+      }
+
+      .navbar__list__inner {
+        width: 100%;
+        letter-spacing: 0.9px;
+        cursor: pointer;
+        font-weight: map-get($weights, "w-md");
+
+        &:hover {
+          font-weight: map-get($weights, "w-xlg");
+        }
+
+        @include lg {
+          letter-spacing: 0.1px;
+        }
+      }
     }
   }
 
@@ -77,10 +162,25 @@
     @include flex-column(center, center);
     gap: 0.7rem;
 
+    @include lg {
+      padding: 0rem 0 0 0;
+      @include flex-row(center, center);
+      gap: 0rem;
+    }
+
     .navbar__login__button {
       @include button-design($white, $veryDarkBlue);
       letter-spacing: 1.1px;
       padding-top: 8px;
+
+      @include lg {
+        padding-top: 0px;
+        @include button-design(transparent, $white);
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .navbar__sign__button {
@@ -88,6 +188,15 @@
         linear-gradient(to right, $veryLightRedGradient, $lightRed),
         $white
       );
+
+      @include lg {
+        @include button-design(white, $lightRed);
+      }
+
+      &:hover {
+        color: $white;
+        background: $veryLightRed;
+      }
     }
   }
 }
@@ -96,8 +205,12 @@
 .header {
   margin-top: 3.5rem;
   padding: 3.28rem 1.1rem 0 1.1rem;
-
   width: 100%;
+
+  @include lg {
+    margin-top: 4rem;
+    padding: 4.6rem 1.1rem 0 1.1rem;
+  }
 
   .header__title {
     font-size: 30.1px;
@@ -105,6 +218,11 @@
     line-height: 2.9rem;
     letter-spacing: 1.2px;
     color: $white;
+
+    @include lg {
+      font-size: 3.6rem;
+      letter-spacing: 0.5px;
+    }
   }
 
   .header__slogan {
@@ -112,20 +230,36 @@
     font-size: 18px;
     text-align: center;
     color: $white;
+
+    @include lg {
+      padding-top: 2rem;
+      font-size: 20px;
+    }
   }
 
   .header__button__container {
-    padding-top: 46px;
-    @include flex-row(space-between, center);
+    padding-top: 45px;
+    @include flex-row(center, center);
+    gap: 1rem;
   }
 
   .header__button__start {
     @include button-design(white, $lightRed);
+
+    &:hover {
+      color: $white;
+      background: $veryLightRed;
+    }
   }
 
   .header__button__learn {
     @include button-design(none, $white);
     border: 1px solid $white;
+
+    &:hover {
+      color: $lightRed;
+      background: $white;
+    }
   }
 }
 
@@ -133,14 +267,31 @@
 .designed {
   padding-top: 3.49rem;
 
+  @include lg {
+    padding-top: 4rem;
+  }
+
   .designed__title {
     text-align: center;
     padding-top: 3.1rem;
     font-size: 1.6rem;
+
+    @include lg {
+      font-size: 2.3rem;
+      padding-top: 5.8rem;
+    }
   }
 
   .designed__inner__container {
     padding-top: 1.8rem;
+    position: relative;
+
+    @include lg {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      padding-top: 4.9rem;
+    }
   }
 
   .designed__figure {
@@ -149,20 +300,45 @@
     background-size: cover cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include lg {
+      background: url("../images/illustration-editor-desktop.svg");
+      background-size: cover cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 62rem;
+      right: -33.4rem;
+      top: -11.5rem;
+    }
   }
 
   .designed__info {
     padding-top: 1.7rem;
-    @include flex-column($justify: flex-start, $align: stretch);
+    @include flex-column(flex-start, stretch);
     gap: 2.5rem;
+    max-width: 525px;
+
+    @include lg {
+      gap: 4.9rem;
+    }
   }
 
   .designed__paragraph__one {
     padding: 0.8rem 0.4rem 0 0.4rem;
+
+    @include lg {
+      padding: 1.5rem 0 0 0;
+    }
   }
 
   .designed__paragraph__two {
     padding: 1.3rem 0.4rem 0 0.4rem;
+
+    @include lg {
+      padding: 1.5rem 0 0 0;
+    }
   }
 }
 
@@ -179,12 +355,28 @@
   border-bottom-left-radius: 6rem;
   @include flex-row(center, center);
 
+  @include lg {
+    margin-top: 16rem;
+    height: 24.9rem;
+    background: url("../images/bg-pattern-circles.svg") no-repeat left -170px top -392px /
+        850px 850px,
+      $veryDarkBlue;
+  }
+
   .state--figure {
     position: absolute;
     width: 100%;
     top: -11.5rem;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 400px;
+
+    @include lg {
+      transform: none;
+      left: 8.5%;
+      max-width: 555px;
+      top: -4.5rem;
+    }
   }
 
   .state__figure__img {
@@ -195,6 +387,12 @@
 
   .state--text--container {
     margin-top: 6.9rem;
+
+    @include lg {
+      margin-top: 0.6rem;
+      max-width: 540px;
+      margin-left: auto;
+    }
   }
 
   .state__title {
@@ -202,12 +400,20 @@
     text-align: center;
     color: $white;
     line-height: 3.2rem;
+
+    @include lg {
+      text-align: left;
+    }
   }
 
   .state__paragraph {
     padding: 1.1rem 0.5rem 0 0.5rem;
     letter-spacing: 0.4px;
     color: $white;
+
+    @include lg {
+      padding: 1.1rem 0 0 0;
+    }
   }
 }
 
@@ -216,8 +422,18 @@
 .free {
   padding-top: 1rem;
 
+  @include lg {
+    padding-top: 8rem;
+  }
+
   .free__inner__container {
     padding-top: 2rem;
+    position: relative;
+
+    @include lg {
+      padding-top: 8rem;
+      @include flex-row(center, center);
+    }
   }
 
   .free__figure {
@@ -226,20 +442,47 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 24rem;
+
+    @include lg {
+      background: url("../images/illustration-laptop-desktop.svg");
+      background-size: cover cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 44rem;
+      width: 100%;
+      left: -32rem;
+      bottom: -8.5rem;
+    }
   }
 
   .free__text__container {
     padding-top: 1.7rem;
     @include flex-column(center center);
     gap: 2.5rem;
+    max-width: 538px;
+
+    @include lg {
+      padding-top: 3.1rem;
+      margin-left: auto;
+      gap: 4.8rem;
+    }
   }
 
   .free__paragraph__one {
     padding: 1.5rem 0.5rem 0 0.5rem;
+
+    @include lg {
+      padding: 1.5rem 0 0 0;
+    }
   }
 
   .free__paragraph__two {
     padding: 1.7rem 0.5rem 0 0.5rem;
+
+    @include lg {
+      padding: 1.7rem 0 0 0;
+    }
   }
 }
 
@@ -251,9 +494,19 @@
   background: $veryDarkBlackBlue;
   border-top-right-radius: 6rem;
 
+  @include lg {
+    margin-top: 18.9rem;
+    height: 26.5rem;
+  }
+
   .footer__inner__container {
     @include flex-column(center center);
     gap: 4rem;
+
+    @include lg {
+      @include flex-row(center center);
+      gap: 10.5rem;
+    }
   }
 
   .footer__logo__container {
@@ -261,15 +514,26 @@
     height: 4rem;
     text-align: center;
     padding-top: 1.5rem;
+
+    @include lg {
+      padding-top: 1.3rem;
+      width: auto;
+    }
   }
 
   .footer__list__container {
     padding: 1rem;
     @include flex-column(center center);
     gap: 2.5rem;
-    font-weight: 700;
+    font-weight: map-get($weights, "w-xlg");
     letter-spacing: 1px;
     font-size: 18px;
+
+    @include lg {
+      @include flex-row(space-between, start);
+      gap: 12rem;
+      padding: 1.8rem 0 0 0;
+    }
   }
 
   .footer__list__main {
@@ -277,14 +541,31 @@
     text-align: center;
     color: $white;
 
+    @include lg {
+      padding: 0rem;
+    }
+
     .footer__list__inner {
       margin-top: 1.5rem;
       padding: 0.5rem;
       @include flex-column(center center);
       gap: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-      font-size: 18px;
+
+      @include lg {
+        margin-top: 2rem;
+        padding: 0rem;
+      }
+
+      .footer_list {
+        font-weight: map-get($weights, "w-md");
+        letter-spacing: 1px;
+        font-size: 18px;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
